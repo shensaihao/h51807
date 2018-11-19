@@ -1,0 +1,1 @@
+"use strict";define(["jquery"],function(t){t.fn.extend({ceiling:function(n){var e=this.offset().top,o=this,s=n;t(window).scroll(function(){var n=t(document).scrollTop();e<n?o.addClass(s):o.removeClass(s)})}})});

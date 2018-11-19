@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/cart.css" />
+	</head>
+
+	<body>
+
+		<header></header>
+		<div id="cart_pagemain">
+			<div id="cart_content">
+				<div class="cart_left">
+					<div class="cart_lWrap">
+						<div class="cart_left_img">
+							<a href="javascript:;">
+								<img src="/images/cart/sample_viewcart_promo_151106.jpg" />
+							</a>
+						</div>
+						<div class="cart_left_main">
+							<div class="cart_leftMainTop">
+								<span class="your_cart">您的购物车</span>
+								<a href="/html/list.html" class="continue_shop">继续购物</a>
+								<span class="cart_else">或</span>
+								<a href="javascript:;" class="jiezhang">结账</a>
+							</div>
+							<div id="product_cart">
+								<div class="cart-header">
+									<label>全选：<input id="allInput" type="checkbox" checked="checked"/></label>
+									<div class="pro_name">产品</div>
+									<div class="pro_num">数量</div>
+									<div class="pro_price">价格</div>
+									<div class="pro_total">小计</div>
+								</div>
+								<div id="allProduct">
+								<script type="text/html" id="cart_template">
+								{{each cart_data item i}}
+									<div class="cart_pro_item">
+										<div class="cart_pro_thumb">
+											<input type="checkbox" checked="checked"/>
+											<a href="javascript:;">
+												<!--<img src="/images/cart/el_sku_CNL518_144x198_0.jpg" class="cart_pro_thumb-image" />-->
+												<img src={{item.imgUrlDetail}} class="cart_pro_thumb-image" />
+											</a>
+										</div>
+										<div class="cart_pro_desc">
+											<div class="cart_pro_desc-info">
+												<div class="cart_pro_product-subname">
+													<a href="javascript:;">
+														<!--滚珠叠香礼盒（阿斯彭琥珀麝香+大溪地扶桑）-->
+														{{item.cnName}}
+													</a>
+												</div>
+												<div class="cart_pro_product-name">
+													<a href="javascript:;">
+														<!--Rollerball Set-->
+														{{item.enName}}
+													</a>
+												</div>
+												<div class="cart_pro_remove-form">
+													<a href="javascript:;" class="remove" data-id={{item.id}}>移除</a>
+												</div>
+											</div>
+										</div>
+									
+										<div class="cart_pro_qty">
+											<a href="javascript:;" class="pro_sub" data-id={{item.id}}>-</a>
+											<span class="pro_number">{{item.num}}</span>
+											<a href="javascript:;" class="pro_add" data-id={{item.id}}>+</a>
+										</div>
+										<div class="cart_pro_price">
+											¥<span class="cart_pro_prices">{{item.s_price}}</span>
+										</div>
+										<div class="cart_pro_total">
+											¥<span class="s_xiaoji">{{item.s_price * item.num}}</span>
+										</div>
+										
+									</div>
+								{{/each}}
+								</script>
+								</div>
+								
+							</div>
+							<div class="cart_left_footer">
+								<a href="/html/list.html" class="continue_shop">继续购物</a>
+								<span class="cart_else">或</span>
+								<a href="javascript:;" class="jiezhang">结账</a>
+								<span class="xiaoji">总计:￥</span>
+								<span class="sum_price"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cart_right">
+					<div class="cart_rWrap">
+						<div class="cart_right_ques">
+							<h3 class="pay_right">支付过程中遇到问题？</h3>
+							<div class="every_que">
+								<div class="online_kf">
+									<p class="online_kefu">在线客服</p>
+									<div>我们的在线客服顾问</div>
+									<div>将为你及时解答疑问</div>
+								</div>
+								<div class="fw_tel">
+									<p>服务热线</p>
+									<div>400-820-7000</div>
+								</div>
+								<div class="fw_hours">
+									<p>服务时间上午9:00-晚上21:00</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="cart_right_ess">
+							<div class="checkout_panel-content">
+								<h3>
+			                        <p>雅诗兰黛</p>
+			                        <p>官方认可的质量保证</p>
+			                    </h3>
+								<div class="bz_detail">
+									<div class="bz_img">
+										<img src="/images/cart/esteelauder_logo.png">
+										<p class="padbottom">官方网站正品保证</p>
+										<p class="desbottom">此标志代表雅诗兰黛官方授权零售商，因此您可以放心在此购买雅诗兰黛商品。</p>
+									</div>
+									<div class="dash_bottom">
+										<img src="/images/cart/esteelauder_lock.jpg">
+										<p class="padbottom">
+											隐私及个人信息安全
+										</p>
+										<p class="desbottom">雅诗兰黛尊重您的隐私更重视与您的关系。您的任何交易及个人信息，均享有绝对的安全保证。</p>
+									</div>
+									<div class="dash_bottom">
+										<img src="/images/cart/chinapay.jpg">
+										<p class="padbottom">安全的支付方式</p>
+										<p class="desbottom">采用最令人信赖的网络支付方式中国银联、支付宝和货到付款并确保您所有的在线支付100%安全。</p>
+									</div>
+									<div class="dash_bottom">
+										<img src="/images/cart/7daysreturn.jpg">
+										<p class="padbottom">7天无理由退换货</p>
+										<p class="desbottom">
+											安心便捷的退换货服务详细内容请参加退换货政策
+										</p>
+									</div>
+									<div class="dash_bottom" style="border: none;">
+										<img src="/images/cart/ems_fedex.jpg" class="min_img">
+										<p class="padbottom">送货服务</p>
+										<p class="desbottom">我们仅选用最卓越的、信赖的物流合作伙伴</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="cart_right_else">
+							<h2 class="links-panel__title">其它信息：</h2>
+							<ul class="links_list">
+								<li class="link">
+									<a href="javascript:;">
+										运费及处理费
+									</a>
+								</li>
+								<li class="link">
+									<a href="javascript:;">
+										退货政策
+									</a>
+								</li>
+								<li class="link">
+									<a href="javascript:;">
+										最大限购政策
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+
+		</footer>
+
+		<script src="/libs/require/require.js" type="text/javascript" data-main="/js/cart.js" charset="utf-8"></script>
+
+	</body>
+
+</html>

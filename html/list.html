@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/css/list.css"/>
+		
+	</head>
+	<body>
+		<header>
+			
+		</header>
+		
+		<div id="pageContent">
+			<div id="leftside">
+				<div class="left">
+					<ul>
+						<li><a href="javascript:;"></a></li>
+						
+						<li><a href="javascript:;"><em>WORLD OF AERIN</em></a></li>
+						
+						<li><a href="javascript:;"><em>闻香识镜</em></a></li>
+						<li><a href="javascript:;"><em>明星沙龙香氛系列</em></a></li>
+						<li><a href="javascript:;"><em>阿斯彭琥珀麝香</em></a></li>
+						<li><a href="javascript:;"><em>第五大道玫瑰</em></a></li>
+						<li><a href="javascript:;"><em>地中海水蔓</em></a></li>
+						<li><a href="javascript:;"><em>全部沙龙香氛</em></a></li>
+						<li><a href="javascript:;"><em>挚爱礼盒</em></a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<div id="pict1">
+				<ul>
+			    	<li class="ac" style="display: block;"><img src="/images/list/aerin-mpp-kv1.jpg" /></li>
+			    	<li><img src="/images/index/Aerin_pckv.jpg" /></li>
+			    	<li><img src="/images/index/d11-2018-kv.jpg" /></li>
+			    	<li><img src="/images/index/d11-kv-aerin.jpg" /></li>
+			    	<li><img src="/images/index/karlie_kloss_pckv_180428.jpg" /></li>
+			    </ul>
+			    <ol>
+			    	<li class="ac">1</li>
+			    	<li>2</li>
+			    	<li>3</li>
+			    	<li>4</li>
+			    	<li>5</li>
+			    </ol>
+			    <a href="javascript:;" id="goPrev">&laquo;</a>
+    			<a href="javascript:;" id="goNext">&raquo;</a>
+			</div>
+			
+			<div id="section-mpp">
+				<div class="mpp-header">
+					<h2 class="mpp-title">阿斯彭琥珀麝香系列</h2>
+				</div>
+				<div class="carousel_container">
+					<ul class="mpp-grid" id="mpp-grid"></ul>
+					<script type="text/html" id="pro-template">
+					{{each products item i}}
+						<li>
+							<div class="product-image">
+								<a href="javascript:;">
+									<img src={{item.imgUrl}}>
+								</a>
+							</div>
+							<div class="product-header">
+								<a href="javascript:;">
+									<h5 class="eyebrow"></h5>
+									<h3 class="el-product_category">{{item.enName}}</h3>
+									<h4 class="el-product_rgn-subheading">{{item.cnName}}</h4>
+								</a>
+								<p class="el-product_price">{{item.price}}</p>	
+							</div>
+							<div class="product_description">
+								<div class="el-product_review">
+									<span></span>
+								</div>
+								
+								<div class="el-product_shop-now-container">
+									<a href="javascript:;" class="add-cart">立即购买</a>
+								</div>
+								<div class="product-information">
+									<a href="/html/detail.html?id={{item.id}}">了解详情</a>
+								</div>
+							</div>
+						</li>
+					{{/each}}
+					</script>
+				</div>
+			</div>
+			<div class="video1">
+				<video width="885" height="424" poster="/images/list/Aerin_Amber_Musk-pc.jpg" >
+					<source src="/images/Aerin_Amber_Musk_15s.mp4" type="video/mp4"></source>
+				</video>
+				<div id="play_button">
+					<a href="javascript:;"></a>
+				</div>
+			</div>
+			<div id="pict2">
+				<img src="/images/list/pc-sx-1101.jpg"/>
+			</div>
+		</div>
+		
+		<footer>
+			
+		</footer>
+		<div id="online">
+			
+		</div>
+		<script src="/libs/require/require.js" type="text/javascript" data-main = "/js/list.js" charset="utf-8"></script>
+		
+	</body>
+</html>
